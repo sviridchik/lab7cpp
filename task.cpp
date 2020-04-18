@@ -50,7 +50,7 @@ void task::Add()
 }
 void task::on_delete_2_clicked()
 {
-    hash->Delete(ui->key->text().toInt());
+    hash->Delete(ui->key_2->text().toInt());
     //    t->on_delete_2_clicked();
 }
 
@@ -58,8 +58,8 @@ void task::on_search_clicked()
 {
     //    t -> on_search_clicked();
     try{
-        int kk = ui->key->text().toInt();
-        ui->info->setText( hash->Exists(kk));
+        int kk = ui->key_3->text().toInt();
+        ui->info_2->setText( hash->Exists(kk));
     }catch(int)
     {
         QMessageBox::critical(parent," ","Error");
@@ -92,9 +92,9 @@ void task::on_draw_clicked()
 void task::on_task_clicked()
 {
 //    t->on_task_clicked();
-    ui->key->setText(QString::number(max));
+    ui->key_4->setText(QString::number(max));
     ui->num->setText(QString::number(answer));
-    ui->info->setText(max_value);
+    ui->info_3->setText(max_value);
 
 }
 
